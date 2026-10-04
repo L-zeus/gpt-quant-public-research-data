@@ -1,0 +1,481 @@
+{
+  "EXECUTION_USABLE": false,
+  "PIT_status": "PIT_APPROXIMATE",
+  "RESEARCH_USABLE": true,
+  "as_of": "2026-10-04T14:16:34+08:00",
+  "auto_order": false,
+  "benchmark_context": {
+    "common_observation_count": 61,
+    "common_observation_lag_trading_sessions": 0,
+    "coverage": {
+      "first_observed_date": "2024-12-09",
+      "last_observed_date": "2026-09-30",
+      "observed_bar_count": 321
+    },
+    "instrument_kind": "INDEX",
+    "last_observed_bar_date": "2026-09-30",
+    "latest_common_observation_date": "2026-09-30",
+    "returns": {
+      "1_bar_pct": 0.285533,
+      "20_bar_pct": -5.504204,
+      "5_bar_pct": -4.114168,
+      "60_bar_pct": -9.069746
+    },
+    "status": "AVAILABLE",
+    "symbol": "sh000300"
+  },
+  "classification": "RESEARCH_EVIDENCE_ONLY",
+  "daily_ohlcv_summary": {
+    "expected_exchange_sessions_in_observed_window": 61,
+    "first_observed_date": "2026-07-07",
+    "last_observed_date": "2026-09-30",
+    "latest_observed_bar": {
+      "amount": 53201770.0,
+      "close": 4.56,
+      "date": "2026-09-30",
+      "high": 4.62,
+      "low": 4.49,
+      "open": 4.61,
+      "retrieved_at": "2026-10-03T15:29:48.149318Z",
+      "upstream_source": "Sina",
+      "volume": 11707800.0
+    },
+    "observed_bar_count": 61,
+    "observed_expected_session_count": 61,
+    "price_semantics": "RawPrice",
+    "recent_observed_bars": [
+      {
+        "amount": 97922811.0,
+        "close": 4.61,
+        "date": "2026-09-23",
+        "high": 4.71,
+        "low": 4.54,
+        "open": 4.71,
+        "volume": 21250085.0
+      },
+      {
+        "amount": 138426320.0,
+        "close": 4.7,
+        "date": "2026-09-24",
+        "high": 4.78,
+        "low": 4.58,
+        "open": 4.61,
+        "volume": 29295099.0
+      },
+      {
+        "amount": 78543391.0,
+        "close": 4.53,
+        "date": "2026-09-28",
+        "high": 4.7,
+        "low": 4.48,
+        "open": 4.68,
+        "volume": 17267648.0
+      },
+      {
+        "amount": 64854370.0,
+        "close": 4.59,
+        "date": "2026-09-29",
+        "high": 4.63,
+        "low": 4.46,
+        "open": 4.49,
+        "volume": 14123499.0
+      },
+      {
+        "amount": 53201770.0,
+        "close": 4.56,
+        "date": "2026-09-30",
+        "high": 4.62,
+        "low": 4.49,
+        "open": 4.61,
+        "volume": 11707800.0
+      }
+    ],
+    "window_basis": "verified observed bars only; no interpolation, forward fill, or synthetic prices"
+  },
+  "data_as_of": "2026-09-30",
+  "data_availability_policy_version": "RESEARCH_EXECUTION_GATE_POLICY_V1",
+  "data_quality": {
+    "family_assessments": [
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "instrument_identity",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "required_price_history",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "benchmark_context",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "trading_calendar",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "listing_status",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "observed_trading_status",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "suspected_suspension_resolution",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "daily_data_freshness",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "target_source_provenance",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "benchmark_source_provenance",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "timezone_aware_data_as_of",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "EXECUTION_ONLY",
+        "family": "timestamped_execution_bars",
+        "reason": "NO_TIMESTAMPED_LIVE_OR_INTRADAY_EXECUTION_BARS",
+        "status": "MISSING"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "price_semantics",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "price_calendar_alignment",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "CRITICAL",
+        "family": "snapshot_identity",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "IMPORTANT",
+        "family": "longer_price_windows",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "IMPORTANT",
+        "family": "amount_liquidity",
+        "reason": null,
+        "status": "AVAILABLE"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "OPTIONAL",
+        "family": "company_name_and_sector",
+        "reason": "NOT_PRESENT_IN_LOCAL_METADATA_SEED",
+        "status": "MISSING"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "OPTIONAL",
+        "family": "valuation",
+        "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+        "status": "MISSING"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "OPTIONAL",
+        "family": "fundamentals",
+        "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+        "status": "MISSING"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "OPTIONAL",
+        "family": "revision_history",
+        "reason": "NO_REVISION_PARENT_RECORDED",
+        "status": "MISSING"
+      },
+      {
+        "blocks_decision": false,
+        "classification": "OPTIONAL",
+        "family": "news_and_catalysts",
+        "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+        "status": "MISSING"
+      }
+    ],
+    "known_unresolved_gap_dates": [],
+    "price_imputation_used": false,
+    "status": "EVIDENCE_COMPLETE",
+    "unknown_gap_dates": []
+  },
+  "evidence_manifest_hash": "48240224cc060e668c2bb9ca9e0fb744fdd7609456c264ce003d3808cf5b0a41",
+  "exchange": "SSE",
+  "execution_feasibility": {
+    "basis": "local daily bars do not establish a timestamped executable quote",
+    "live_quote": null,
+    "quote_timestamp": null,
+    "status": "EXECUTION_DATA_INSUFFICIENT"
+  },
+  "execution_gate": {
+    "EXECUTION_USABLE": false,
+    "basis": "static daily evidence does not contain a timestamped current quote or intraday execution context",
+    "missing_requirements": [
+      "timestamped_current_quote",
+      "timestamped_execution_bars",
+      "intraday_execution_context",
+      "entry_price_freshness",
+      "spread_and_liquidity_execution_fields"
+    ],
+    "status": "EXECUTION_DATA_INSUFFICIENT"
+  },
+  "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+  "generated_at": "2026-10-04T14:16:34+08:00",
+  "horizon": "D2",
+  "industry": null,
+  "instrument_identity": {
+    "board": "SH_MAIN",
+    "delist_date": null,
+    "exchange": "SSE",
+    "identity_source": [
+      "SSE_OFFICIAL_SECURITY_MASTER"
+    ],
+    "industry": null,
+    "kind": "STOCK",
+    "listing_date": "2000-07-06",
+    "listing_metadata_status": "AVAILABLE",
+    "listing_status": "LISTED",
+    "name": "波导股份",
+    "sector": null,
+    "symbol": "sh600130"
+  },
+  "liquidity": {
+    "amount_status": "AVAILABLE",
+    "latest_observed_amount": 53201770.0,
+    "mean_last_20_observed_bar_amount": 102463985.9,
+    "rule": "amount is not substituted for volume, and volume is not substituted for amount"
+  },
+  "listing_status": {
+    "board": "SH_MAIN",
+    "delist_date": null,
+    "listing_date": "2000-07-06",
+    "listing_metadata_status": "AVAILABLE",
+    "official_source": "SSE_MAIN",
+    "retrieved_at": "2026-10-02T04:23:11.817683+00:00",
+    "status": "LISTED"
+  },
+  "market_regime": {
+    "decision_owner": "CUSTOM_GPT",
+    "status": "NOT_COMPUTED_IN_STATIC_DATA_PLANE",
+    "value": null
+  },
+  "missing_families": [
+    {
+      "blocks_decision": false,
+      "classification": "EXECUTION_ONLY",
+      "family": "timestamped_execution_bars",
+      "reason": "NO_TIMESTAMPED_LIVE_OR_INTRADAY_EXECUTION_BARS",
+      "status": "MISSING"
+    },
+    {
+      "blocks_decision": false,
+      "classification": "OPTIONAL",
+      "family": "company_name_and_sector",
+      "reason": "NOT_PRESENT_IN_LOCAL_METADATA_SEED",
+      "status": "MISSING"
+    },
+    {
+      "blocks_decision": false,
+      "classification": "OPTIONAL",
+      "family": "valuation",
+      "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+      "status": "MISSING"
+    },
+    {
+      "blocks_decision": false,
+      "classification": "OPTIONAL",
+      "family": "fundamentals",
+      "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+      "status": "MISSING"
+    },
+    {
+      "blocks_decision": false,
+      "classification": "OPTIONAL",
+      "family": "revision_history",
+      "reason": "NO_REVISION_PARENT_RECORDED",
+      "status": "MISSING"
+    },
+    {
+      "blocks_decision": false,
+      "classification": "OPTIONAL",
+      "family": "news_and_catalysts",
+      "reason": "NOT_PRESENT_IN_LOCAL_WAREHOUSE_SCHEMA",
+      "status": "MISSING"
+    }
+  ],
+  "momentum": {
+    "observed_return_windows_pct": {
+      "1_bar_pct": -0.653595,
+      "20_bar_pct": -7.505071,
+      "5_bar_pct": -2.35546,
+      "60_bar_pct": 11.764706
+    },
+    "window_basis": "observed bars; descriptive only"
+  },
+  "name": "波导股份",
+  "package_type": "ResearchEvidencePackage",
+  "prediction_decision": null,
+  "relative_strength": {
+    "benchmark_return_20_common_bars_pct": -5.504204,
+    "benchmark_return_60_common_bars_pct": -9.069746,
+    "benchmark_symbol": "sh000300",
+    "common_observation_count": 61,
+    "excess_return_20_common_bars_pct": -2.000867,
+    "excess_return_60_common_bars_pct": 20.834452,
+    "latest_common_observation_date": "2026-09-30",
+    "status": "AVAILABLE",
+    "target_return_20_common_bars_pct": -7.505071,
+    "target_return_60_common_bars_pct": 11.764706,
+    "window_basis": "matching observed dates; each window counts common bars"
+  },
+  "remote_calls": 0,
+  "research_context_role": "EVIDENCE_ONLY_NO_PREDICTOR_DECISION",
+  "research_gate": {
+    "RESEARCH_USABLE": true,
+    "daily_data_freshness": "DAILY_RESEARCH_FRESH",
+    "exchange_session_lag": 0,
+    "execution_data_excluded_from_research_gate": true,
+    "missing_critical_families": [],
+    "required_ohlcv_bars": 61,
+    "stale_but_usable_max_exchange_sessions": 3,
+    "status": "RESEARCH_USABLE"
+  },
+  "retrieved_at": "2026-10-03T17:45:45.299672+00:00",
+  "returns": {
+    "1_bar_pct": -0.653595,
+    "20_bar_pct": -7.505071,
+    "5_bar_pct": -2.35546,
+    "60_bar_pct": 11.764706,
+    "window_basis": "observed bars; no forward fill, interpolation, backfill, or synthetic prices"
+  },
+  "schema_version": "RESEARCH_EVIDENCE_PACKAGE_V1",
+  "snapshot_hash": "10766e114b199d88732d6c4646fc3a7c07bc80a994c1d71836ee43120dcf4618",
+  "snapshot_id": "8fdd6788abf49598cfee0fc23e1cc5735964b392aabf5bddab4d2f3176d54f1d",
+  "source_provenance": {
+    "benchmark": {
+      "PIT_status": "PIT_APPROXIMATE",
+      "content_hash": "5d3d7794c51cfad82f7cdc051a43fee2380c5a26deef42ffd61bcc78c9417ef6",
+      "data_manifest_id": "236ea95f1d1632fce5cc62d275c98db5b3a0c1247087d2f0c4d45d569f3415b5",
+      "first_bar_date_in_package": "2024-12-09",
+      "last_bar_date_in_package": "2026-09-30",
+      "manifest_hash": "236ea95f1d1632fce5cc62d275c98db5b3a0c1247087d2f0c4d45d569f3415b5",
+      "off_calendar_observation_count": 0,
+      "price_semantics": "RawPrice",
+      "raw_content_hash": "d71af90b91f0d4212f03b4343491b5ab25d80a96bc45dc5cc46069def4fa942c",
+      "retrieved_at": "2026-10-03T17:45:45.299672+00:00",
+      "row_count_in_manifest": 1760,
+      "row_count_in_package": 321,
+      "row_count_in_snapshot": 1760,
+      "symbol": "sh000300",
+      "upstream_source": "MULTI_SOURCE"
+    },
+    "listing_metadata": {
+      "seed_snapshot_retrieved_at": "2026-10-02T04:23:11.817683+00:00",
+      "source": "SSE_MAIN",
+      "status": "AVAILABLE"
+    },
+    "static_seed_hashes": {
+      "as_of_status_records_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "calendar_hash": "b462f4c2ec17a83321f33963b49630877d1c59b267b4e4313621ee3e450f1431",
+      "listing_metadata_seed_hash": "7e05417006bd998eae749e7f3beace8e754b115e6fa1b8495857bf8fc088276f",
+      "trading_status_seed_hash": "514bc40591c3552c05aab1d487fe4aa8d66c6799a3d48d19a8974e4fb04fe8e0"
+    },
+    "target": {
+      "PIT_status": "PIT_APPROXIMATE",
+      "content_hash": "8535c113e70aca5c066ece884a962c61155c0ab05f57dc6682afa7a9324bfdca",
+      "data_manifest_id": "0198fc7aadd3dceb65e4824ea063dcf6f021481611ca9efb031838b71637a2eb",
+      "first_bar_date_in_package": "2026-07-07",
+      "last_bar_date_in_package": "2026-09-30",
+      "manifest_hash": "0198fc7aadd3dceb65e4824ea063dcf6f021481611ca9efb031838b71637a2eb",
+      "off_calendar_observation_count": 0,
+      "price_semantics": "RawPrice",
+      "raw_content_hash": "f73a9a840143b300223ecd406ef10551bc6e0734bd510788ff1a8d79de59f442",
+      "retrieved_at": "2026-10-03T15:29:48.149464+00:00",
+      "row_count_in_manifest": 61,
+      "row_count_in_package": 61,
+      "row_count_in_snapshot": 61,
+      "symbol": "sh600130",
+      "upstream_source": "Sina"
+    }
+  },
+  "source_snapshot_id": "39a7a0b0955e5bfa9e90fd8713e0b762643994206aa0d43988883df45fe0bbaf",
+  "symbol": "sh600130",
+  "trading_status": {
+    "observed_session_evidence": {
+      "basis": "hash-validated provider OHLCV observations on canonical exchange sessions",
+      "first_observed_session": "2026-07-07",
+      "last_observed_session": "2026-09-30",
+      "observed_session_count": 61,
+      "observed_session_dates_hash": "fbe84beba78a676edfb0d5cf7529604e44d9323b44e22eef42d37ea038caeff3",
+      "status": "VERIFIED_TRADING_BY_VALIDATED_OHLCV_BARS"
+    },
+    "status": "UNKNOWN",
+    "verified_status_record_count": 0
+  },
+  "volatility": {
+    "daily_return_std_20_observed_bars_pct": 2.185884,
+    "window_basis": "population standard deviation of observed close-to-close returns"
+  },
+  "volume": {
+    "latest_observed_volume": 11707800.0,
+    "mean_last_20_observed_bar_volume": 22321615.75,
+    "unit": "as stored by source"
+  }
+}

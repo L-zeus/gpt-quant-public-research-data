@@ -1,0 +1,188 @@
+{
+  "DEEP_available": false,
+  "PIT_status": "PIT_APPROXIMATE",
+  "as_of": "2026-09-30",
+  "auto_order": false,
+  "candidate_pool": {
+    "broad_scan_limit": 50,
+    "evaluated_n": 100,
+    "retained_preliminary_candidates_n": 3,
+    "shortlist_candidate_count": 15,
+    "top50_details_retained": false
+  },
+  "coverage": {
+    "evaluated": 100,
+    "local_dataset_count": 100,
+    "rejected_dataset_count": 0,
+    "requested_universe": 100,
+    "stage1": {
+      "evaluated": 100,
+      "limit": 50,
+      "name": "BROAD_SCAN",
+      "shortlist_count": 50
+    },
+    "stage2": {
+      "candidate_count": 15,
+      "limit": 15,
+      "name": "SHORTLIST"
+    },
+    "stage3": {
+      "limit": 10,
+      "name": "STANDARD",
+      "scheduled_count": 10,
+      "status": "NOT_RUN"
+    },
+    "stage4": {
+      "limit": 3,
+      "name": "DEEP",
+      "scheduled_count": 3,
+      "status": "NOT_RUN"
+    }
+  },
+  "data_as_of": "2026-09-30",
+  "dynamic_backtest_available": false,
+  "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+  "final_research_candidates": [],
+  "generated_at": "2026-10-04T14:16:34+08:00",
+  "mode": "AGGRESSIVE_RESEARCH_MODE",
+  "preliminary_top_candidates": [
+    {
+      "EXECUTION_USABLE": false,
+      "RESEARCH_USABLE": true,
+      "aggressiveness": "AGGRESSIVE_RESEARCH_SCREEN",
+      "confidence": null,
+      "confirmation": null,
+      "data_status": "RESEARCH_ONLY_PRELIMINARY_SCREEN",
+      "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+      "horizon": "D1/D2/D5 judgment reserved for Custom GPT",
+      "invalidating_condition": null,
+      "major_risks": [
+        "PIT_APPROXIMATE",
+        "NO_TIMESTAMPED_EXECUTION_DATA",
+        "NOT_A_PREDICTOR_RANKING"
+      ],
+      "name": "金健米业",
+      "opportunity_type": "RESEARCH_SCREEN",
+      "rank": 1,
+      "research_signal": {
+        "liquidity_amount": 2960624365.0,
+        "momentum_20_pct": -0.755287,
+        "momentum_60_pct": 145.149254,
+        "opportunity_score_raw_pct": 72.196984,
+        "scorecard_coverage_pct": 100.0
+      },
+      "risk_unit": null,
+      "score_semantics": "SCANNER_SCREENING_SCORE_NOT_PREDICTOR_SCORE",
+      "source_snapshot_id": "0cfa2a7c73a1bcd9ad2b250f860e9e657f60cc3f802e16e05beae1e39006e3e1",
+      "symbol": "sh600127",
+      "why_now": [
+        {
+          "field": "momentum_20_pct",
+          "value": -0.755287
+        },
+        {
+          "field": "momentum_60_pct",
+          "value": 145.149254
+        },
+        {
+          "field": "liquidity_amount",
+          "value": 2960624365.0
+        }
+      ]
+    },
+    {
+      "EXECUTION_USABLE": false,
+      "RESEARCH_USABLE": true,
+      "aggressiveness": "AGGRESSIVE_RESEARCH_SCREEN",
+      "confidence": null,
+      "confirmation": null,
+      "data_status": "RESEARCH_ONLY_PRELIMINARY_SCREEN",
+      "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+      "horizon": "D1/D2/D5 judgment reserved for Custom GPT",
+      "invalidating_condition": null,
+      "major_risks": [
+        "PIT_APPROXIMATE",
+        "NO_TIMESTAMPED_EXECUTION_DATA",
+        "NOT_A_PREDICTOR_RANKING"
+      ],
+      "name": "古越龙山",
+      "opportunity_type": "CONFIRMED_MOMENTUM",
+      "rank": 2,
+      "research_signal": {
+        "liquidity_amount": 1093331572.0,
+        "momentum_20_pct": 46.071429,
+        "momentum_60_pct": 61.447368,
+        "opportunity_score_raw_pct": 53.759399,
+        "scorecard_coverage_pct": 100.0
+      },
+      "risk_unit": null,
+      "score_semantics": "SCANNER_SCREENING_SCORE_NOT_PREDICTOR_SCORE",
+      "source_snapshot_id": "5f358aa2915a04cdd42006ba6f82d1fc878f0a1e1d18710d8e351a68f4bf6ab9",
+      "symbol": "sh600059",
+      "why_now": [
+        {
+          "field": "momentum_20_pct",
+          "value": 46.071429
+        },
+        {
+          "field": "momentum_60_pct",
+          "value": 61.447368
+        },
+        {
+          "field": "liquidity_amount",
+          "value": 1093331572.0
+        }
+      ]
+    },
+    {
+      "EXECUTION_USABLE": false,
+      "RESEARCH_USABLE": true,
+      "aggressiveness": "AGGRESSIVE_RESEARCH_SCREEN",
+      "confidence": null,
+      "confirmation": null,
+      "data_status": "RESEARCH_ONLY_PRELIMINARY_SCREEN",
+      "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+      "horizon": "D1/D2/D5 judgment reserved for Custom GPT",
+      "invalidating_condition": null,
+      "major_risks": [
+        "PIT_APPROXIMATE",
+        "NO_TIMESTAMPED_EXECUTION_DATA",
+        "NOT_A_PREDICTOR_RANKING"
+      ],
+      "name": "郑州煤电",
+      "opportunity_type": "RESEARCH_SCREEN",
+      "rank": 3,
+      "research_signal": {
+        "liquidity_amount": 1049655514.0,
+        "momentum_20_pct": -1.111111,
+        "momentum_60_pct": 53.448276,
+        "opportunity_score_raw_pct": 26.168582,
+        "scorecard_coverage_pct": 100.0
+      },
+      "risk_unit": null,
+      "score_semantics": "SCANNER_SCREENING_SCORE_NOT_PREDICTOR_SCORE",
+      "source_snapshot_id": "190876618dd4576a736545d1149552cc7437beba7a81f0df32a6213ca8346449",
+      "symbol": "sh600121",
+      "why_now": [
+        {
+          "field": "momentum_20_pct",
+          "value": -1.111111
+        },
+        {
+          "field": "momentum_60_pct",
+          "value": 53.448276
+        },
+        {
+          "field": "liquidity_amount",
+          "value": 1049655514.0
+        }
+      ]
+    }
+  ],
+  "remote_calls": 0,
+  "research_context_role": "SCREENING_EVIDENCE_ONLY; D1/D2/D5 judgments remain with the existing Custom GPT",
+  "schema_version": "STATIC_RESEARCH_SCAN_V1",
+  "score_semantics": "SCANNER_SCREENING_SCORE_NOT_PREDICTOR_SCORE; observed 20/60 bar return screen only",
+  "source": "LOCAL_WAREHOUSE_ONLY",
+  "status": "PASS"
+}

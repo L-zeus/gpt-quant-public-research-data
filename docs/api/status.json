@@ -1,0 +1,15 @@
+{
+  "ALPHA_PROVEN": false,
+  "AUTO_ORDER": false,
+  "FRESH_ENABLED": false,
+  "PIT_STATUS": "PIT_APPROXIMATE",
+  "data_as_of": "2026-09-30",
+  "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+  "generated_at": "2026-10-04T14:16:34+08:00",
+  "last_verified_context_count": 100,
+  "live_quote_available": false,
+  "market_data_kind": "DAILY_OHLCV_ONLY",
+  "refresh_status": "STATIC_SNAPSHOT_VERIFIED_LOCALLY; PROVIDER_REFRESH_NOT_CONFIGURED",
+  "schema_version": "STATIC_RESEARCH_STATUS_V1",
+  "status": "PREPARED_NOT_PUBLISHED"
+}

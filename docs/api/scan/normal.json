@@ -1,0 +1,13 @@
+{
+  "PIT_status": "PIT_APPROXIMATE",
+  "as_of": "2026-09-30",
+  "auto_order": false,
+  "data_as_of": "2026-09-30",
+  "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+  "generated_at": "2026-10-04T14:16:34+08:00",
+  "mode": "NORMAL",
+  "reason": "The verified existing Local Scanner emitted AGGRESSIVE_RESEARCH_MODE only; no normal-mode result is represented as available.",
+  "research_context_role": "NO_PREDICTOR_DECISION",
+  "schema_version": "STATIC_RESEARCH_SCAN_V1",
+  "status": "NOT_AVAILABLE"
+}
