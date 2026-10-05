@@ -118,11 +118,16 @@ def main() -> None:
 
     require(cap.get("CUSTOM_GPT_PREVIEW_PASSED") is True, "verified Preview baseline missing")
     require(cap.get("CUSTOM_GPT_RESEARCH_USABLE") is True, "research chain must remain usable")
-    require(cap.get("preview_verification_source") == "FAST_RESEARCH_RECOVERY_BASELINE_1", "Preview source changed")
+    require(cap.get("preview_verification_source") == "EXISTING_VERIFIED_PREVIEW_BASELINE", "Preview source label changed")
+    require(cap.get("preview_verification_artifact") == "FAST_RESEARCH_RECOVERY_BASELINE_1", "Preview baseline artifact changed")
+    require(cap.get("PREVIEW_REVERIFIED_THIS_RUN") is False, "Preview run provenance mismatch")
     require(cap.get("preview_verification_mode") == "EXISTING_VERIFIED_PREVIEW", "Preview mode changed")
     require(cap.get("preview_reverified_this_run") is False, "Preview run provenance mismatch")
     require(status.get("CUSTOM_GPT_PREVIEW_PASSED") is True, "status Preview flag mismatch")
     require(status.get("CUSTOM_GPT_RESEARCH_USABLE") is True, "status research flag mismatch")
+    require(status.get("PREVIEW_REVERIFIED_THIS_RUN") is False, "status Preview provenance mismatch")
+    require(status.get("preview_verification_source") == "EXISTING_VERIFIED_PREVIEW_BASELINE", "status Preview source label changed")
+    require(status.get("preview_verification_artifact") == "FAST_RESEARCH_RECOVERY_BASELINE_1", "status Preview baseline artifact changed")
     require(status.get("preview_reverified_this_run") is False, "status Preview provenance mismatch")
     require(cap.get("CUSTOM_GPT_RESEARCH_USABLE") == status.get("CUSTOM_GPT_RESEARCH_USABLE"), "status semantics disagree")
 

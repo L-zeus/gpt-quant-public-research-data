@@ -1506,8 +1506,8 @@
     },
     {
       "path": "docs/api/capabilities.json",
-      "sha256": "338c3e7cef30aa92ca316aa9ffef1681c32756e1a6eeeabb8185439a41f6d1d9",
-      "size_bytes": 2777
+      "sha256": "8f41c4a8db457e95327cbb9d4098e649a1a765ec8df2c4288ebb8aa78d33ecdd",
+      "size_bytes": 3007
     },
     {
       "path": "docs/api/context/sh600004/D1.json",
@@ -3026,11 +3026,11 @@
     },
     {
       "path": "docs/api/status.json",
-      "sha256": "9ed2dc642dd8c5a4822a1977f0f09e0a78aaa086d898344e0005fab80f811ec6",
-      "size_bytes": 2094
+      "sha256": "ceca1e1d62472f906c15a3c80b510c9dcceb5b95e4b6bafc46892c22c71c989b",
+      "size_bytes": 2324
     }
   ],
-  "generated_at": "2026-10-05T11:13:31+08:00",
+  "generated_at": "2026-10-05T13:30:25+08:00",
   "json_file_count": 605,
   "json_file_count_excludes_static_manifest": true,
   "pages_url": "https://l-zeus.github.io/gpt-quant-public-research-data",

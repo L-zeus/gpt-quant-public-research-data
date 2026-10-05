@@ -14,7 +14,7 @@
   "status": "STATIC_RESEARCH_SNAPSHOT",
   "CUSTOM_GPT_PREVIEW_PASSED": true,
   "CUSTOM_GPT_RESEARCH_USABLE": true,
-  "preview_verification_source": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+  "preview_verification_source": "EXISTING_VERIFIED_PREVIEW_BASELINE",
   "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
   "preview_reverified_this_run": false,
   "latest_expected_session": "2026-09-30",
@@ -24,11 +24,13 @@
   "SERVICE_READINESS": {
     "CUSTOM_GPT_PREVIEW_PASSED": true,
     "CUSTOM_GPT_RESEARCH_USABLE": true,
-    "preview_verification_source": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+    "preview_verification_source": "EXISTING_VERIFIED_PREVIEW_BASELINE",
     "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
     "preview_reverified_this_run": false,
     "research_context_available": true,
-    "market_scan_available": true
+    "market_scan_available": true,
+    "preview_verification_artifact": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+    "PREVIEW_REVERIFIED_THIS_RUN": false
   },
   "DATA_FRESHNESS": {
     "data_as_of": "2026-09-30",
@@ -52,5 +54,7 @@
     "ALPHA_PROVEN": false
   },
   "metadata_semantics_version": "CAPABILITY_SEMANTICS_HOTFIX_V1",
-  "metadata_updated_at": "2026-10-05T11:13:31+08:00"
+  "metadata_updated_at": "2026-10-05T13:30:25+08:00",
+  "preview_verification_artifact": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+  "PREVIEW_REVERIFIED_THIS_RUN": false
 }
