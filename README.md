@@ -9,4 +9,6 @@ This repository serves a public, read-only static research evidence API at `http
 - `PIT_STATUS=PIT_APPROXIMATE`, `FRESH_ENABLED=false`, `ALPHA_PROVEN=false`, `AUTO_ORDER=false`.
 - Baseline paths return explicit `NOT_AVAILABLE`; dynamic backtest and prediction-record writes are disabled.
 
-The GitHub Actions publishing workflow validates and deploys the committed snapshot when `docs/api/**` changes on `main`, and it remains available for manual dispatch. It does not fetch market data. Scheduled market-data refresh remains disabled until an approved, timestamped provider adapter is implemented and verified.
+The GitHub Actions publishing workflow validates and deploys the committed snapshot when `docs/api/**` changes on `main`, and it remains available for manual dispatch. It does not fetch market data.
+
+The separate `Update static research data` workflow has a weekday 19:00 Asia/Shanghai schedule and a manual refresh/expansion dispatch. Its versioned exchange calendar prevents requests on holidays and before the publication window. The production provider authorization gate is currently closed, so a trading-day run stops before requesting market data; refresh and expansion remain unavailable until an authorized, timestamped provider adapter is configured and verified. Publication remains disabled unless every release gate passes.

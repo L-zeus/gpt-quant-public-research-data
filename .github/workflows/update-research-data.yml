@@ -1,0 +1,155 @@
+name: Update static research data
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Refresh existing coverage or prepare an expansion
+        type: choice
+        options:
+          - refresh
+          - expand
+        default: refresh
+        required: true
+      target_coverage:
+        description: Expansion target (validated enum)
+        type: choice
+        options:
+          - "300"
+          - "1000"
+          - broader
+        default: "300"
+        required: true
+      dry_run:
+        description: Validate only; never deploy
+        type: boolean
+        default: true
+        required: true
+      publish:
+        description: Request publication after every release gate passes
+        type: boolean
+        default: false
+        required: true
+  schedule:
+    - cron: "0 11 * * 1-5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    outputs:
+      decision: ${{ steps.gate.outputs.decision }}
+      publish: ${{ steps.gate.outputs.publish }}
+      expected_session: ${{ steps.gate.outputs.expected_session }}
+    steps:
+      - name: Check out source without persisting credentials
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Set the tested Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.14.6"
+          check-latest: false
+      - name: Show fixed Python toolchain
+        run: |
+          python --version
+          python -m unittest discover -s tests -v
+      - name: Apply trading calendar and provider gates
+        id: gate
+        run: |
+          MODE="${{ inputs.mode || 'refresh' }}"
+          TARGET="${{ inputs.target_coverage || '300' }}"
+          DRY_RUN="${{ inputs.dry_run || 'false' }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            PUBLISH_REQUESTED=true
+          else
+            PUBLISH_REQUESTED="${{ inputs.publish || 'false' }}"
+          fi
+          python scripts/research_release_gate.py run \
+            --root . \
+            --mode "$MODE" \
+            --target-coverage "$TARGET" \
+            --dry-run "$DRY_RUN" \
+            --publish-requested "$PUBLISH_REQUESTED"
+      - name: Retain refresh quality report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: refresh-quality-report-${{ github.run_id }}
+          path: run-artifacts/REFRESH_QUALITY_REPORT.json
+          if-no-files-found: ignore
+          retention-days: 30
+  build:
+    needs: prepare
+    if: needs.prepare.outputs.publish == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source without persisting credentials
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Set the tested Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.14.6"
+          check-latest: false
+      - name: Validate the complete staged Pages bundle
+        run: |
+          python scripts/build_public_bundle.py \
+            --source-root . \
+            --output "$RUNNER_TEMP/site/docs" \
+            --expected-session "${{ needs.prepare.outputs.expected_session }}"
+      - name: Upload one validated Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: ${{ runner.temp }}/site/docs
+  deploy:
+    needs: [prepare, build]
+    if: needs.prepare.outputs.publish == 'true' && needs.build.result == 'success'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out canary code without persisting credentials
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Set the tested Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.14.6"
+          check-latest: false
+      - name: Deploy the single Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Verify the frozen HTTPS Action contract
+        run: |
+          python scripts/online_compatibility_canary.py \
+            --base-url "https://l-zeus.github.io/gpt-quant-public-research-data" \
+            --output run-artifacts/STATIC_COMPATIBILITY_CANARY.json
+      - name: Retain compatibility canary result
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: static-compatibility-canary-${{ github.run_id }}
+          path: run-artifacts/STATIC_COMPATIBILITY_CANARY.json
+          if-no-files-found: ignore
+          retention-days: 30

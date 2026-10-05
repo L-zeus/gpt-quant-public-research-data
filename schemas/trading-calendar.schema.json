@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Versioned A-share Trading Calendar",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "timezone",
+    "range_start",
+    "range_end",
+    "calendar_kind",
+    "sessions",
+    "closures",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {"const": "A_SHARE_TRADING_CALENDAR_V1"},
+    "timezone": {"const": "Asia/Shanghai"},
+    "range_start": {"type": "string", "format": "date"},
+    "range_end": {"type": "string", "format": "date"},
+    "calendar_kind": {"type": "string"},
+    "sessions": {"type": "array", "items": {"type": "string", "format": "date"}},
+    "closures": {"type": "array"},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri"}}
+  },
+  "additionalProperties": true
+}

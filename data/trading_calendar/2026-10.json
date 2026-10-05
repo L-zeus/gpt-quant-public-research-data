@@ -1,0 +1,63 @@
+{
+  "schema_version": "A_SHARE_TRADING_CALENDAR_V1",
+  "timezone": "Asia/Shanghai",
+  "range_start": "2026-10-01",
+  "range_end": "2026-10-31",
+  "calendar_kind": "official_exchange_holiday_plus_verified_weekday_sessions",
+  "sessions": [
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "closures": [
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-07",
+      "reason": "Mid-Autumn and National Day holiday closure"
+    },
+    {
+      "start": "2026-10-03",
+      "end": "2026-10-04",
+      "reason": "weekend"
+    },
+    {
+      "start": "2026-10-10",
+      "end": "2026-10-11",
+      "reason": "weekend"
+    },
+    {
+      "start": "2026-10-17",
+      "end": "2026-10-18",
+      "reason": "weekend"
+    },
+    {
+      "start": "2026-10-24",
+      "end": "2026-10-25",
+      "reason": "weekend"
+    },
+    {
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "reason": "weekend"
+    }
+  ],
+  "sources": [
+    "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+    "https://www.szse.cn/www/disclosure/notice/general/t20260917_622911.html"
+  ],
+  "notes": "Unknown dates outside the versioned range fail closed. Session dates are valid only for October 2026 and must be replaced from official exchange notices before the range is extended."
+}
