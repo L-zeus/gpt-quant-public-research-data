@@ -1,0 +1,73 @@
+name: Provider connectivity probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: provider-connectivity-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out probe source without persisting credentials
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Set the verified Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.14.6"
+          check-latest: false
+      - name: Install separately hash-locked build tools
+        id: build_tools
+        run: python -m pip install --disable-pip-version-check --require-hashes -r provider_probe/build-requirements.lock
+      - name: Install the separately hash-locked probe environment
+        id: install
+        if: steps.build_tools.outcome == 'success'
+        run: python -m pip install --disable-pip-version-check --no-build-isolation --require-hashes -r provider_probe/requirements.lock
+      - name: Record dependency installation failure
+        if: always() && (steps.build_tools.outcome == 'failure' || steps.install.outcome == 'failure')
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          output = Path("run-artifacts/provider-probe/PROVIDER_PROBE.json")
+          output.parent.mkdir(parents=True, exist_ok=True)
+          output.write_text(json.dumps({
+              "schema_version": "PROVIDER_CONNECTIVITY_PROBE_V1",
+              "overall_status": "FAIL",
+              "provider_probe_dispatched": True,
+              "provider_runner_reachable": None,
+              "market_data_api_calls": 0,
+              "request_attempted": False,
+              "raw_price_rows_persisted": 0,
+              "raw_price_payload_logged": False,
+              "provider_terms_status": "TERMS_UNVERIFIED",
+              "provider_production_approved": False,
+              "publication_mode": "NOT_APPROVED",
+              "provider_primary": None,
+              "provider_fallback": None,
+              "provider_research_refresh_ready": False,
+              "error_class": "PROBE_DEPENDENCY_INSTALL_FAILURE"
+          }, indent=2) + "\n", encoding="utf-8")
+          print("Probe dependency installation failed; provider calls were not attempted.")
+          PY
+      - name: Run one bounded request per listed source
+        if: steps.build_tools.outcome == 'success' && steps.install.outcome == 'success'
+        run: python scripts/provider_probe.py --output run-artifacts/provider-probe/PROVIDER_PROBE.json
+      - name: Upload only the sanitized probe report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: provider-connectivity-probe-${{ github.run_id }}
+          path: run-artifacts/provider-probe/PROVIDER_PROBE.json
+          if-no-files-found: ignore
+          retention-days: 14
