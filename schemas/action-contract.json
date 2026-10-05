@@ -1,0 +1,38 @@
+{
+  "schema_version": "FROZEN_GPT_ACTION_CONTRACT_V1",
+  "base_url": "https://l-zeus.github.io/gpt-quant-public-research-data",
+  "auth": "None",
+  "openapi_sha256": "6f3e54a2a5ad582c1c2eff88b1de486f24f4a2f2d3dfe0154e5d484c4af0c514",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/api/capabilities.json",
+      "operationId": "getCapabilities"
+    },
+    {
+      "method": "GET",
+      "path": "/api/coverage.json",
+      "operationId": "getCoverage"
+    },
+    {
+      "method": "GET",
+      "path": "/api/scan/normal.json",
+      "operationId": "getNormalMarketScan"
+    },
+    {
+      "method": "GET",
+      "path": "/api/scan/aggressive.json",
+      "operationId": "getAggressiveMarketScan"
+    },
+    {
+      "method": "GET",
+      "path": "/api/context/{symbol}/{horizon}.json",
+      "operationId": "getResearchContext"
+    },
+    {
+      "method": "GET",
+      "path": "/api/baseline/{symbol}/{horizon}.json",
+      "operationId": "getBaselineEvidence"
+    }
+  ]
+}

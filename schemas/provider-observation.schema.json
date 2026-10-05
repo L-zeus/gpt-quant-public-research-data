@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Normalized Provider Observation",
+  "type": "object",
+  "required": [
+    "requested_adapter",
+    "actual_upstream",
+    "retrieved_at",
+    "data_as_of",
+    "rows",
+    "schema_fingerprint",
+    "content_hash",
+    "price_semantics",
+    "fallback_used",
+    "fallback_reason"
+  ],
+  "properties": {
+    "requested_adapter": {"type": "string"},
+    "actual_upstream": {"type": "string"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "data_as_of": {"type": "string", "format": "date"},
+    "rows": {"type": "integer", "minimum": 0},
+    "schema_fingerprint": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "content_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "price_semantics": {"enum": ["RawPrice", "AdjustedPrice", "Unknown"]},
+    "fallback_used": {"type": "boolean"},
+    "fallback_reason": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
