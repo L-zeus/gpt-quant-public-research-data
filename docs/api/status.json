@@ -9,7 +9,48 @@
   "last_verified_context_count": 100,
   "live_quote_available": false,
   "market_data_kind": "DAILY_OHLCV_ONLY",
-  "refresh_status": "STATIC_SNAPSHOT_VERIFIED_LOCALLY; PROVIDER_REFRESH_NOT_CONFIGURED",
+  "refresh_status": "LATEST_COMPLETE_SESSION; OFFICIAL_EXCHANGE_CLOSURE; NO_PROVIDER_REFRESH_PERFORMED",
   "schema_version": "STATIC_RESEARCH_STATUS_V1",
-  "status": "PREPARED_NOT_PUBLISHED"
+  "status": "STATIC_RESEARCH_SNAPSHOT",
+  "CUSTOM_GPT_PREVIEW_PASSED": true,
+  "CUSTOM_GPT_RESEARCH_USABLE": true,
+  "preview_verification_source": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+  "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
+  "preview_reverified_this_run": false,
+  "latest_expected_session": "2026-09-30",
+  "session_age": 0,
+  "session_age_unit": "COMPLETED_TRADING_SESSIONS",
+  "freshness_state": "LATEST_COMPLETE_SESSION",
+  "SERVICE_READINESS": {
+    "CUSTOM_GPT_PREVIEW_PASSED": true,
+    "CUSTOM_GPT_RESEARCH_USABLE": true,
+    "preview_verification_source": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+    "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
+    "preview_reverified_this_run": false,
+    "research_context_available": true,
+    "market_scan_available": true
+  },
+  "DATA_FRESHNESS": {
+    "data_as_of": "2026-09-30",
+    "generated_at": "2026-10-04T14:16:34+08:00",
+    "latest_expected_session": "2026-09-30",
+    "session_age": 0,
+    "session_age_unit": "COMPLETED_TRADING_SESSIONS",
+    "freshness_state": "LATEST_COMPLETE_SESSION"
+  },
+  "EXECUTION_READINESS": {
+    "EXECUTION_USABLE": false,
+    "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+    "FRESH_ENABLED": false,
+    "AUTO_ORDER": false
+  },
+  "STATISTICAL_VALIDATION": {
+    "PIT_STATUS": "PIT_APPROXIMATE",
+    "DYNAMIC_BACKTEST_AVAILABLE": false,
+    "DEEP_AVAILABLE": false,
+    "baseline_evidence_available": false,
+    "ALPHA_PROVEN": false
+  },
+  "metadata_semantics_version": "CAPABILITY_SEMANTICS_HOTFIX_V1",
+  "metadata_updated_at": "2026-10-05T11:13:31+08:00"
 }
