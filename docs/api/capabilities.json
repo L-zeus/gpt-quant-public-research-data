@@ -3,7 +3,7 @@
   "AUTO_ORDER": false,
   "BLOCKED": 5118,
   "CUSTOM_GPT_HYBRID_USABLE": false,
-  "CUSTOM_GPT_RESEARCH_USABLE": false,
+  "CUSTOM_GPT_RESEARCH_USABLE": true,
   "DEEP_available": false,
   "DEGRADED_USABLE": 1,
   "ELIGIBLE": 101,
@@ -25,11 +25,57 @@
   "market_scan_available": true,
   "prediction_record_write_available": false,
   "refresh_mode": "NO_PROVIDER_REFRESH_PERFORMED",
-  "refresh_status": "STATIC_SNAPSHOT_VERIFIED_LOCAL_NOT_YET_PUBLISHED",
+  "refresh_status": "LATEST_COMPLETE_SESSION; OFFICIAL_EXCHANGE_CLOSURE; NO_PROVIDER_REFRESH_PERFORMED",
   "remote_calls": 0,
   "research_context_available": true,
   "research_usable_symbol_n": 100,
   "runtime_identity": "V16.3.2-GITHUB-PAGES-STATIC-RESEARCH-DATA",
   "schema_version": "STATIC_RESEARCH_CAPABILITIES_V1",
-  "source": "LOCAL_VERIFIED_SNAPSHOT"
+  "source": "LOCAL_VERIFIED_SNAPSHOT",
+  "CUSTOM_GPT_PREVIEW_PASSED": true,
+  "preview_verification_source": "EXISTING_VERIFIED_PREVIEW_BASELINE",
+  "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
+  "preview_reverified_this_run": false,
+  "latest_expected_session": "2026-09-30",
+  "session_age": 0,
+  "session_age_unit": "COMPLETED_TRADING_SESSIONS",
+  "freshness_state": "LATEST_COMPLETE_SESSION",
+  "DEEP_AVAILABLE": false,
+  "DYNAMIC_BACKTEST_AVAILABLE": false,
+  "SERVICE_READINESS": {
+    "CUSTOM_GPT_PREVIEW_PASSED": true,
+    "CUSTOM_GPT_RESEARCH_USABLE": true,
+    "preview_verification_source": "EXISTING_VERIFIED_PREVIEW_BASELINE",
+    "preview_verification_mode": "EXISTING_VERIFIED_PREVIEW",
+    "preview_reverified_this_run": false,
+    "research_context_available": true,
+    "market_scan_available": true,
+    "preview_verification_artifact": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+    "PREVIEW_REVERIFIED_THIS_RUN": false
+  },
+  "DATA_FRESHNESS": {
+    "data_as_of": "2026-09-30",
+    "generated_at": "2026-10-04T14:16:34+08:00",
+    "latest_expected_session": "2026-09-30",
+    "session_age": 0,
+    "session_age_unit": "COMPLETED_TRADING_SESSIONS",
+    "freshness_state": "LATEST_COMPLETE_SESSION"
+  },
+  "EXECUTION_READINESS": {
+    "EXECUTION_USABLE": false,
+    "execution_status": "EXECUTION_DATA_INSUFFICIENT",
+    "FRESH_ENABLED": false,
+    "AUTO_ORDER": false
+  },
+  "STATISTICAL_VALIDATION": {
+    "PIT_STATUS": "PIT_APPROXIMATE",
+    "DYNAMIC_BACKTEST_AVAILABLE": false,
+    "DEEP_AVAILABLE": false,
+    "baseline_evidence_available": false,
+    "ALPHA_PROVEN": false
+  },
+  "metadata_semantics_version": "CAPABILITY_SEMANTICS_HOTFIX_V1",
+  "metadata_updated_at": "2026-10-05T13:30:25+08:00",
+  "preview_verification_artifact": "FAST_RESEARCH_RECOVERY_BASELINE_1",
+  "PREVIEW_REVERIFIED_THIS_RUN": false
 }
